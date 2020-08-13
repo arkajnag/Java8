@@ -29,6 +29,19 @@ public class IntegerCollection {
 		// 6. Sorting in Descending Order using Comparator Functional Interface
 		numbers.stream().sorted((int1,int2)->(int1>int2)?-1:(int1<int2)?1:0).forEach(i -> System.out.print(i + " "));
 		
+		System.out.println("");
+		// 7. Index of a Value in the List. If present, return Index Number and if not, returns -1.
+		try{
+			int indexNumber=numbers.indexOf(9);
+			System.out.println("Index Number:"+indexNumber);
+		 }catch(Exception e){
+			 System.out.println(e.getLocalizedMessage());
+		}
+		
+		String removeText=numbers.removeIf(val->val.intValue()==90)?"Value is removed successfully":"Value is not removed successfully";
+		System.out.println("Test Response for removal:"+removeText);
+		
+		
 	}
 
 }
